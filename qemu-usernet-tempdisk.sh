@@ -26,6 +26,6 @@ tempdisk=$(mktemp)
 
 qemu-img create -f qcow2 -b "$base_disk_absolute_path" $tempdisk
 
-trap "rm $tempdisk" INT QUIT
-
 "$script_dir/qemu-usernet.sh" "$tempdisk"
+
+rm $tempdisk
