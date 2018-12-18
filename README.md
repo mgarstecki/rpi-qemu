@@ -31,3 +31,4 @@ Once you're done and have unmounted the partitions, disable the NBD device with 
 ## Contents
 
 * `qemu-usernet.sh` : launch an ARM VM with QEMU with an above-customized image and a pre-downloaded kernel. Expose port 22 on host port 2222.
+* `qemu-usernet-tempdisk.sh` : launch the above script, but launch the VM on a temporary disk based on the provided image to avoid modifying it.
