@@ -29,7 +29,7 @@ qemu-system-arm \
   -m 256 \
   -M versatilepb \
   -serial mon:stdio \
-  -append "root=/dev/sda2 rootfstype=ext4 rw" \
-  -hda "$diskfile" \
   -nographic \
+  -append "root=/dev/sda2 rootfstype=ext4 rw console=ttyAMA0" \
+  -hda "$diskfile" \
   -net nic,macaddr=de:ad:be:af:ca:fe -net user,hostfwd=tcp::2222-:22
